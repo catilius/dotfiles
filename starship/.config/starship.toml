@@ -1,0 +1,50 @@
+add_newline = false
+scan_timeout = 10
+
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_status\
+$git_state\
+$git_metrics\
+$line_break\
+$character
+"""
+
+[character]
+success_symbol = '[●](bold green)'
+error_symbol = '[●](bold fg:#FF5F1F)'
+[line_break]
+disabled = false
+
+[directory]
+truncation_length = 3
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+commit_hash_length = 7
+format = "on [$hash]($style) "
+tag_symbol = "🔖 "
+
+[git_status]
+ahead = "⇡${ahead_count}"
+diverged = "⇅⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${behind_count}"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style)'
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_metrics]
+disabled = false
+added_style = "bold blue"
+format = "[+$added]($added_style)/[-$deleted]($deleted_style) "
+
+[hg_branch]
+symbol = " "
+
+[package]
+disabled = true
