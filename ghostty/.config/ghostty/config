@@ -1,4 +1,5 @@
-theme = "mellow"
+#theme = Black Metal (Bathory)
+theme = Mellow
 background-opacity = 0.7
 background-blur = 50
 
@@ -7,7 +8,7 @@ shell-integration-features = no-cursor,sudo,no-title
 adjust-cell-height = 10%
 
 cursor-click-to-move = true
-cursor-style = "block"
+cursor-style = block
 cursor-style-blink = false
 
 mouse-hide-while-typing = true
@@ -20,6 +21,6 @@ window-padding-x = 12
 macos-titlebar-style= tabs
 macos-titlebar-proxy-icon = hidden
 title = " "
-window-colorspace = "display-p3"
+window-colorspace = display-p3
 
 scrollback-limit = 100000
