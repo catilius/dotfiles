@@ -1,30 +1,18 @@
 return {
-  {
-    "datsfilipe/vesper.nvim",
-    config = function()
-      require("vesper").setup({
-        transparent = true,
-        italics = {
-          comments = true,
-          keywords = false,
-          functions = false,
-          strings = false,
-          variables = false,
-        },
-        overrides = {
-          NormalFloat = { bg = "NONE" },
-          FloatBorder = { bg = "NONE" },
-          CursorLine = { bg = "#1e1e1e" },
-          SnacksPickerListCursorLine = { bg = "#1e1e1e" },
-          -- Cursor = { fg = "#000000", bg = "#ffffff" },
-        },
-      })
-    end,
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "vesper",
-    },
-  },
+  "metalelf0/black-metal-theme-neovim",
+  lazy = false,
+  priority = 1000,
+
+  config = function()
+    local black_metal = require("black-metal")
+
+    black_metal.setup({
+      theme = "bathory",
+      variant = "dark",
+    })
+
+    black_metal.load("bathory", "dark")
+    vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { link = "FloatBorder" })
+    vim.api.nvim_set_hl(0, "BlinkCmpScrollBarThumb", { bg = "#c2a47f" })
+  end,
 }
