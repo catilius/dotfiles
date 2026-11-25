@@ -42,7 +42,7 @@ for f in anomalyco/tap/opencode-v2 oven-sh/bun/bun bat fastfetch fd fzf git mole
   brew install "$f" || echo "FAILED: $f"
 done
 
-for c in ogdesign-eagle bitwarden iina mac-mouse-fix ghostty zed arc thebrowsercompany-dia \
+for c in ogdesign-eagle bitwarden iina mac-mouse-fix ghostty zed thebrowsercompany-dia \
          helium-browser spotify discord keka; do
   brew install --cask "$c" || echo "FAILED: $c"
 done
